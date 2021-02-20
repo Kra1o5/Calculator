@@ -1,4 +1,4 @@
-package com.houarizegai.calculator;
+package lopez_carmona_alejandro.calculator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
