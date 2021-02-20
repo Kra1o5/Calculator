@@ -30,6 +30,7 @@ public final class Calculator {
     private boolean go = true; // For calculate with Opt != (=)
     private boolean addWrite = true; // Connect numbers in display
     private double val = 0; // Save the value typed for calculation
+    private float cantidad;
     
     public static int getWindowWidth() {
         return WINDOW_WIDTH;
@@ -294,6 +295,14 @@ public final class Calculator {
     public void setVal(double val) {
         this.val = val;
     }
+    
+    public float getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(float cantidad) {
+        this.cantidad = cantidad;
+    }
 
     private void operativa_ventana() {
         setVentana(new JFrame("Calculator"));
@@ -379,7 +388,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -395,7 +404,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -458,7 +467,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -521,7 +530,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -585,7 +594,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -630,7 +639,7 @@ public final class Calculator {
         setBtnEqual(initBtn("=", x[2], y[5], event -> {
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), cantidad));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -661,7 +670,7 @@ public final class Calculator {
             repaintFont();
             if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", getInText().getText()))
                 if (isGo()) {
-                    setVal(calc(getVal(), getInText().getText(), getOpt()));
+                    setVal(calc(getVal(), getInText().getText(), getOpt(), getCantidad()));
                     if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(getVal()))) {
                         getInText().setText(String.valueOf((int) getVal()));
                     } else {
@@ -720,7 +729,7 @@ public final class Calculator {
         return btn;
     }
 
-    public double calc(double x, String input, char opt) {
+    public double calc(double x, String input, char opt, float cantidad) {
         getInText().setFont(getInText().getFont().deriveFont(Font.PLAIN));
         double y = Double.parseDouble(input);
         switch (getOpt()) {
