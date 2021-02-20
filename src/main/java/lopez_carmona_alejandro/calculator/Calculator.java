@@ -30,6 +30,20 @@ public class Calculator {
     private boolean go = true; // For calculate with Opt != (=)
     private boolean addWrite = true; // Connect numbers in display
     private double val = 0; // Save the value typed for calculation
+    
+    public JFrame getVentana() {
+        return ventana;
+    }
+    
+    public void setVentana(JFrame ventana) {
+        this.ventana = ventana;
+    }
+    
+    private void operativa_ventana() {
+        setVentana(new JFrame("Calculator"));
+        getVentana().setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        getVentana().setLocationRelativeTo(null); // Move ventana to center        
+    }
 
     /*
         Mx Calculator: 
@@ -68,9 +82,7 @@ public class Calculator {
     */
 
     public Calculator() {
-        ventana = new JFrame("Calculator");
-        ventana.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        ventana.setLocationRelativeTo(null); // Move ventana to center
+        operativa_ventana();
 
         comboTheme = initCombo(new String[]{"Simple", "Colored"}, 230, 30, "Theme", themeSwitchEventConsumer);
 
