@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"lopez_carmona_alejandro.calculator"}];updateSearchResults();

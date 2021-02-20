@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"lopez_carmona_alejandro.calculator","l":"Calculator"}];updateSearchResults();
