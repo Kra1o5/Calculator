@@ -10,6 +10,10 @@ import java.awt.Color;
 import javax.swing.*;
 import java.lang.Math;
 
+/**
+ *
+ * @author alope
+ */
 public final class Calculator {
 
     private static final int WINDOW_WIDTH = 410;
@@ -32,274 +36,546 @@ public final class Calculator {
     private double val = 0; // Save the value typed for calculation
     private float cantidad;
     
+    /**
+     *
+     * @return the WINDOW_WIDTH value
+     */
     public static int getWindowWidth() {
         return WINDOW_WIDTH;
     }
     
+    /**
+     *
+     * @return the WINDOW_HEIGHT value
+     */
     public static int getWindowHeight() {
         return WINDOW_HEIGHT;
     }
 
+    /**
+     *
+     * @return the BUTTON_WIDTH value
+     */
     public static int getButtonWidth() {
         return BUTTON_WIDTH;
     }
 
+    /**
+     *
+     * @return WINDOW_HEIGHT value
+     */
     public static int getButtonHeight() {
         return BUTTON_HEIGHT;
     }
   
+    /**
+     *
+     * @return the MARGIN_X value
+     */
     public static int getMarginX() {
         return MARGIN_X;
     }
 
+    /**
+     *
+     * @return the MARGIN_Y value
+     */
     public static int getMarginY() {
         return MARGIN_Y;
     }
     
+    /**
+     *
+     * @return the ventana value
+     */
     public JFrame getVentana() {
         return ventana;
     }
     
+    /**
+     *
+     * @param ventana set the value from the constructor
+     */
     public void setVentana(JFrame ventana) {
         this.ventana = ventana;
     }
     
+    /**
+     *
+     * @return the comboCalcType value
+     */
     public JComboBox<String> getComboCalcType() {
         return comboCalcType;
     }
     
+    /**
+     *
+     * @param comboCalcType set the value from the constructor
+     */
     public void setComboCalcType(JComboBox<String> comboCalcType) {
         this.comboCalcType = comboCalcType;
     }
 
+    /**
+     *
+     * @return the comboTheme value
+     */
     public JComboBox<String> getComboTheme() {
         return comboTheme;
     }
     
+    /**
+     *
+     * @param comboTheme set the value from the constructor
+     */
     public void setComboTheme(JComboBox<String> comboTheme) {
         this.comboTheme = comboTheme;
     }
  
+    /**
+     *
+     * @return the inText value
+     */
     public JTextField getInText() {
         return inText;
     }
     
+    /**
+     *
+     * @param inText set the value from the constructor
+     */
     public void setInText(JTextField inText) {
         this.inText = inText;
     }
 
+    /**
+     *
+     * @return the btnC value
+     */
     public JButton getBtnC() {
         return btnC;
     }
     
+    /**
+     *
+     * @param btnC set the value from the constructor
+     */
     public void setBtnC(JButton btnC) {
         this.btnC = btnC;
     }  
     
+    /**
+     *
+     * @return the btnBack value
+     */
     public JButton getBtnBack() {
         return btnBack;
     }
     
+    /**
+     *
+     * @param btnBack set the value from the constructor
+     */
     public void setBtnBack(JButton btnBack) {
         this.btnBack = btnBack;
     }  
     
+    /**
+     *
+     * @return the btnMod value
+     */
     public JButton getBtnMod() {
         return btnMod;
     }
     
+    /**
+     *
+     * @param btnMod set the value from the constructor
+     */
     public void setBtnMod(JButton btnMod) {
         this.btnMod = btnMod;
     }  
     
+    /**
+     *
+     * @return the btnDiv value
+     */
     public JButton getBtnDiv() {
         return btnDiv;
     }
     
+    /**
+     *
+     * @param btnDiv set the value from the constructor
+     */
     public void setBtnDiv(JButton btnDiv) {
         this.btnDiv = btnDiv;
     } 
     
+    /**
+     *
+     * @return the btnMul value
+     */
     public JButton getBtnMul() {
         return btnMul;
     }
     
+    /**
+     *
+     * @param btnMul set the value from the constructor
+     */
     public void setBtnMul(JButton btnMul) {
         this.btnMul = btnMul;
     }  
     
+    /**
+     *
+     * @return the btnSub value
+     */
     public JButton getBtnSub() {
         return btnSub;
     }
     
+    /**
+     *
+     * @param btnSub set the value from the constructor
+     */
     public void setBtnSub(JButton btnSub) {
         this.btnSub = btnSub;
     }  
     
+    /**
+     *
+     * @return the btnAdd value
+     */
     public JButton getBtnAdd() {
         return btnAdd;
     }
     
+    /**
+     *
+     * @param btnAdd set the value from the constructor
+     */
     public void setBtnAdd(JButton btnAdd) {
         this.btnAdd = btnAdd;
     }  
     
+    /**
+     *
+     * @return the btn0 value
+     */
     public JButton getBtn0() {
         return btn0;
     }
     
+    /**
+     *
+     * @param btn0 set the value from the constructor
+     */
     public void setBtn0(JButton btn0) {
         this.btn0 = btn0;
     } 
     
+    /**
+     *
+     * @return the btn1 value
+     */
     public JButton getBtn1() {
         return btn1;
     }
     
+    /**
+     *
+     * @param btn1 set the value from the constructor
+     */
     public void setBtn1(JButton btn1) {
         this.btn1 = btn1;
     }  
     
+    /**
+     *
+     * @return the btn2 value
+     */
     public JButton getBtn2() {
         return btn2;
     }
     
+    /**
+     *
+     * @param btn2 set the value from the constructor
+     */
     public void setBtn2(JButton btn2) {
         this.btn2 = btn2;
     }  
     
+    /**
+     *
+     * @return the btn3 value
+     */
     public JButton getBtn3() {
         return btn3;
     }
     
+    /**
+     *
+     * @param btn3 set the value from the constructor
+     */
     public void setBtn3(JButton btn3) {
         this.btn3 = btn3;
     }  
     
+    /**
+     *
+     * @return the btn4 value
+     */
     public JButton getBtn4() {
         return btn4;
     }
     
+    /**
+     *
+     * @param btn4 set the value from the constructor
+     */
     public void setBtn4(JButton btn4) {
         this.btn4 = btn4;
     } 
     
+    /**
+     *
+     * @return the btn5 value
+     */
     public JButton getBtn5() {
         return btn5;
     }
     
+    /**
+     *
+     * @param btn5 set the value from the constructor
+     */
     public void setBtn5(JButton btn5) {
         this.btn5 = btn5;
     }  
     
+    /**
+     *
+     * @return the btn6 value
+     */
     public JButton getBtn6() {
         return btn6;
     }
     
+    /**
+     *
+     * @param btn6 set the value from the constructor
+     */
     public void setBtn6(JButton btn6) {
         this.btn6 = btn6;
     }  
     
+    /**
+     *
+     * @return the btn7 value
+     */
     public JButton getBtn7() {
         return btn7;
     }
     
+    /**
+     *
+     * @param btn7 set the value from the constructor
+     */
     public void setBtn7(JButton btn7) {
         this.btn7 = btn7;
     }  
     
+    /**
+     *
+     * @return the btn8 value
+     */
     public JButton getBtn8() {
         return btn8;
     }
     
+    /**
+     *
+     * @param btn8 set the value from the constructor
+     */
     public void setBtn8(JButton btn8) {
         this.btn8 = btn8;
     } 
     
-     public JButton getBtn9() {
+    /**
+     *
+     * @return the btn9 value
+     */
+    public JButton getBtn9() {
         return btn9;
     }
     
+    /**
+     *
+     * @param btn9 set the value from the constructor
+     */
     public void setBtn9(JButton btn9) {
         this.btn9 = btn9;
     }  
     
+    /**
+     *
+     * @return the btnPoint value
+     */
     public JButton getBtnPoint() {
         return btnPoint;
     }
     
+    /**
+     *
+     * @param btnPoint set the value from the constructor
+     */
     public void setBtnPoint(JButton btnPoint) {
         this.btnPoint = btnPoint;
     } 
     
+    /**
+     *
+     * @return the btnEqual value
+     */
     public JButton getBtnEqual() {
         return btnEqual;
     }
     
+    /**
+     *
+     * @param btnEqual set the value from the constructor
+     */
     public void setBtnEqual(JButton btnEqual) {
         this.btnEqual = btnEqual;
     } 
 
+    /**
+     *
+     * @return the btnRoot value
+     */
     public JButton getBtnRoot() {
         return btnRoot;
     }
     
+    /**
+     *
+     * @param btnRoot set the value from the constructor
+     */
     public void setBtnRoot(JButton btnRoot) {
         this.btnRoot = btnRoot;
     } 
 
+    /**
+     *
+     * @return the btnPower value
+     */
     public JButton getBtnPower() {
         return btnPower;
     }
     
+    /**
+     *
+     * @param btnPower set the value from the constructor
+     */
     public void setBtnPower(JButton btnPower) {
         this.btnPower = btnPower;
     } 
 
+    /**
+     *
+     * @return the btnLog value
+     */
     public JButton getBtnLog() {
         return btnLog;
     }
     
+    /**
+     *
+     * @param btnLog set the value from the constructor
+     */
     public void setBtnLog(JButton btnLog) {
         this.btnLog = btnLog;
     } 
 
+    /**
+     *
+     * @return the opt value
+     */
     public char getOpt() {
         return opt;
     }
     
+    /**
+     *
+     * @param opt set the value from the constructor
+     */
     public void setOpt(char opt) {
         this.opt = opt;
     } 
 
+    /**
+     *
+     * @return the go value
+     */
     public boolean isGo() {
         return go;
     }
     
+    /**
+     *
+     * @param go set the value from the constructor
+     */
     public void setGo(boolean go) {
         this.go = go;
     }   
 
+    /**
+     *
+     * @return the addWrite value
+     */
     public boolean isAddWrite() {
         return addWrite;
     }
 
+    /**
+     *
+     * @param addWrite set the value from the constructor
+     */
     public void setAddWrite(boolean addWrite) {
         this.addWrite = addWrite;
     }
 
+    /**
+     *
+     * @return the val value
+     */
     public double getVal() {
         return val;
     }
 
+    /**
+     *
+     * @param val set the value from the constructor 
+     */
     public void setVal(double val) {
         this.val = val;
     }
     
+    /**
+     *
+     * @return the cantidad value
+     */
     public float getCantidad() {
         return cantidad;
     }
 
+    /**
+     *
+     * @param cantidad set the value from the constructor
+     */
     public void setCantidad(float cantidad) {
         this.cantidad = cantidad;
     }
@@ -345,6 +621,11 @@ public final class Calculator {
          x[0] x[1] x[2] x[3]
     
     */
+
+    /**
+     * Main constructor of the class
+     */
+
 
     public Calculator() {
         operativa_ventana();
@@ -729,6 +1010,14 @@ public final class Calculator {
         return btn;
     }
 
+    /**
+     *
+     * @param x
+     * @param input
+     * @param opt
+     * @param cantidad
+     * @return the operation result
+     */
     public double calc(double x, String input, char opt, float cantidad) {
         getInText().setFont(getInText().getFont().deriveFont(Font.PLAIN));
         double y = Double.parseDouble(input);
@@ -855,6 +1144,10 @@ public final class Calculator {
         }
     };
 
+    /**
+     *
+     * @param args create new instance of the Calculator class
+     */
     public static void main(String[] args) {
         new Calculator();
     }
